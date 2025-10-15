@@ -3,43 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>💙 Happy Birthday 💙</title>
+    <title>🎂 Chúc mừng sinh nhật em 💙</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container" id="birthday-check">
-      <h2 class="intro-title">🎂 Nhập ngày sinh của em để mở quà 🎁</h2>
-      <p class="hint">
-        Chọn đúng ngày sinh nhé, anh có điều bất ngờ dành cho em 💫
-      </p>
+    <div id="birthday-check" class="container">
+      <h2 class="title">🎂 Nhập ngày sinh của em để mở quà 🎁</h2>
+      <p class="hint">Nhập đúng định dạng <b>DD/MM/YYYY</b> nhé 💫</p>
 
       <div class="input-box">
-        <input type="date" id="birth-input" class="birth-input" />
+        <input type="text" id="birth-input" placeholder="" maxlength="10" />
       </div>
 
       <button class="btn" onclick="checkBirthday()">Tiếp tục 💙</button>
       <p id="error" class="error"></p>
     </div>
 
-    <div class="container hidden" id="birthday-page">
-      <h1 class="title">💙 Chúc mừng sinh nhật em 💙</h1>
-      <p class="line">
-        Anh muốn khác biệt hơn nên đã chúc sinh nhật như thế này 🎁
+    <div id="birthday-page" class="container hidden">
+      <h1 class="main-title">💙 Chúc mừng sinh nhật em 💙</h1>
+      <p class="message">
+        Anh muốn khác biệt hơn một chút nên đã chúc sinh nhật em theo cách này
+        💌
+        <br /><br />
+        Chúc em luôn vui vẻ, hạnh phúc và được mọi người yêu thương thật nhiều
+        💫
+        <br />
+        Cảm ơn em đã xuất hiện trong cuộc đời anh 💙
       </p>
-      <p class="line">
-        Chúc em luôn vui vẻ, hạnh phúc và luôn được mọi người yêu thương 💫
-      </p>
-
-      <button id="play-btn" class="btn" onclick="playMusic()">
-        Bấm để nghe nhạc 🎶
-      </button>
+      <div class="hearts">💖💙💖</div>
     </div>
-
-    <canvas id="fireworks"></canvas>
-    <audio
-      id="music"
-      src="https://cdn.pixabay.com/audio/2023/07/17/audio_d34efcf64a.mp3"
-    ></audio>
 
     <script src="script.js"></script>
   </body>
