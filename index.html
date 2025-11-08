@@ -2,37 +2,90 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🎂 Chúc mừng sinh nhật em 💙</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chúc mừng sinh nhật 💝</title>
+
+    <!-- liên kết CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="birthday-check" class="container">
-      <h2 class="title">🎂 Nhập ngày sinh của em để mở quà 🎁</h2>
-      <p class="hint">Nhập đúng định dạng <b>DD/MM/YYYY</b> nhé 💫</p>
+    <audio id="bgMusic" src="music.mp3"></audio>
+    <div class="veil"></div>
+    <canvas id="fx"></canvas>
 
-      <div class="input-box">
-        <input type="text" id="birth-input" placeholder="" maxlength="10" />
+    <header>
+      <div class="brand">
+        <div class="logo"></div>
+        <span>Birthday • For You</span>
       </div>
+      <div class="controls">
+        <button class="btn secondary" id="musicBtn">Bật nhạc ♪</button>
+        <button class="btn" id="openGift">Mở quà 🎁</button>
+      </div>
+    </header>
 
-      <button class="btn" onclick="checkBirthday()">Tiếp tục 💙</button>
-      <p id="error" class="error"></p>
-    </div>
+    <main>
+      <section class="hero">
+        <div class="panel">
+          <div class="kicker">Hôm nay là ngày đặc biệt</div>
+          <h1 class="title" id="heroTitle">Chúc mừng sinh nhật em 🎂</h1>
+          <p class="subtitle" id="heroSub">
+            Anh muốn khác biệt nên chúc em theo cách này — nhẹ nhàng mà nhớ lâu.
+          </p>
 
-    <div id="birthday-page" class="container hidden">
-      <h1 class="main-title">💙 Chúc mừng sinh nhật em 💙</h1>
-      <p class="message">
-        Anh muốn khác biệt hơn một chút nên đã chúc sinh nhật em theo cách này
-        💌
-        <br /><br />
-        Chúc em luôn vui vẻ, hạnh phúc và được mọi người yêu thương thật nhiều
-        💫
-        <br />
-        Cảm ơn em đã xuất hiện trong cuộc đời anh 💙
-      </p>
-      <div class="hearts">💖💙💖</div>
-    </div>
+          <div class="inputRow">
+            <input id="name" type="text" placeholder="Nhập tên em vô nhe" />
+            <button class="btn" id="start">Bắt đầu ✨</button>
+          </div>
 
+          <div class="cards hidden" id="cards">
+            <div class="card">
+              <h3>Điều ước 1</h3>
+              <p>Chúc em luôn bình an và nhẹ nhàng.</p>
+            </div>
+            <div class="card">
+              <h3>Điều ước 2</h3>
+              <p>Chúc em mạnh mẽ để vượt qua ngày khó khăn</p>
+            </div>
+            <div class="card">
+              <h3>Điều ước 3</h3>
+              <p>Chúc em luôn được yêu thương</p>
+            </div>
+            <div class="card">
+              <h3>Điều ước 4</h3>
+              <p>Chúc em ngày càng xinh đẹp hơn nữa nha</p>
+            </div>
+          </div>
+
+          <div class="center hidden" id="ctaWrap">
+            <button class="btn cta" id="fireworks">Bắn pháo hoa 🎆</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="letter">
+        <h2 class="title">Một lời nhỏ gửi em</h2>
+        <p class="subtitle">Cảm ơn vì đã xuất hiện</p>
+
+        <div class="center">
+          <button class="btn secondary" id="reveal">Mở thiệp 💌</button>
+        </div>
+
+        <div class="card hidden" id="cardMsg">
+          <h3>Thiệp của anh</h3>
+          <p id="cardLines"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>Làm bằng tất cả thương mến 💗</footer>
+
+    <!-- audio -->
+    <audio id="music" loop>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- liên kết JS -->
     <script src="script.js"></script>
   </body>
 </html>
